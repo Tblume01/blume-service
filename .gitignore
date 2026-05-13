@@ -1,0 +1,9 @@
+node_modules/
+.next/
+node_modules/
+.env.local
+.env
+deploy-api.sh
+deploy.sh
+auto-deploy.sh
+.next/

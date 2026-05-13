@@ -1,0 +1,249 @@
+@import "tailwindcss";
+
+/* ===========================================
+   BLUME 2026 MASTER DESIGN SYSTEM
+   "The Apple of HVAC & Building Performance"
+   3 Emotional Modes: Residential / Commercial / AI
+   =========================================== */
+
+:root {
+  /* Universal tokens */
+  --soft-white: #F8FAFC;
+  --steel-gray: #94A3B8;
+  --frost-glass: rgba(255,255,255,0.08);
+  --luxury-bronze: #B08D57;
+  --cta-blue: #1EA7FF;
+  --cta-hover: #66C7FF;
+  --emergency-red: #DC2626;
+
+  /* Mode 1: Residential Comfort (default) */
+  --ocean-navy: #10233E;
+  --midnight: #081120;
+  --warm-sand: #F1EFE9;
+  --coastal-blue: #3BA7FF;
+  --warm-gray: #D6D3D1;
+
+  /* Mode 2: Commercial Intelligence */
+  --industrial-navy: #0A1428;
+  --tech-blue: #208CFF;
+  --slate: #1F2937;
+  --graphite: #111827;
+
+  /* Mode 3: MO / AI Platform */
+  --black-navy: #050816;
+  --neon-blue: #00AEEF;
+  --purple-accent: #7C3AED;
+  --cyan-glow: #22D3EE;
+
+  --background: var(--soft-white);
+  --foreground: var(--ocean-navy);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-size: 18px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Typography ─────────────────────────── */
+
+h1, h2, h3, h4 {
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  color: var(--ocean-navy);
+}
+
+h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 800; }
+h2 { font-size: clamp(1.75rem, 3.5vw, 2.75rem); font-weight: 700; }
+h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); font-weight: 600; }
+
+/* White text headings on dark backgrounds */
+.dark-section h1,
+.dark-section h2,
+.dark-section h3,
+.dark-section h4 {
+  color: var(--soft-white);
+}
+
+/* ── Premium Buttons ────────────────────── */
+
+.btn-primary {
+  background: var(--cta-blue);
+  color: white;
+  font-weight: 700;
+  padding: 1rem 2.25rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(30,167,255,0.25);
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-primary:hover {
+  background: var(--cta-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 40px rgba(30,167,255,0.35);
+}
+
+.btn-emergency {
+  background: var(--emergency-red);
+  color: white;
+  font-weight: 700;
+  padding: 1rem 2.25rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-emergency:hover {
+  background: #b91c1c;
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--soft-white);
+  font-weight: 700;
+  padding: 1rem 2.25rem;
+  border-radius: 12px;
+  border: 2px solid rgba(255,255,255,0.25);
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-outline:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.5);
+}
+
+/* ── Cards ──────────────────────────────── */
+
+/* Light mode cards */
+.blume-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
+}
+
+.blume-card:hover {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+/* Dark mode cards (glassmorphism) */
+.glass-card {
+  background: rgba(17, 24, 39, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* Light glass (for dark hero overlays) */
+.glass-light {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+}
+
+/* ── Section Backgrounds ────────────────── */
+
+/* Residential: warm sand */
+.section-warm {
+  background: var(--warm-sand);
+}
+
+/* Dark hero gradient */
+.section-hero {
+  background: linear-gradient(180deg, var(--midnight) 0%, var(--ocean-navy) 100%);
+}
+
+/* Commercial: industrial dark */
+.section-commercial {
+  background: linear-gradient(180deg, var(--industrial-navy) 0%, var(--slate) 100%);
+}
+
+/* AI/Platform: deep black */
+.section-ai {
+  background: linear-gradient(180deg, var(--black-navy) 0%, var(--midnight) 100%);
+}
+
+/* ── Section Spacing (luxury) ───────────── */
+
+.section-luxury {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+@media (max-width: 768px) {
+  .section-luxury {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+}
+
+/* ── Trust Bar ──────────────────────────── */
+
+.trust-bar {
+  background: rgba(255,255,255,0.03);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+/* ── Bronze accent line ─────────────────── */
+
+.bronze-line {
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, var(--luxury-bronze) 50%, transparent 100%);
+  max-width: 120px;
+  margin: 0 auto;
+}
+
+/* ── Smooth everything ──────────────────── */
+
+html { scroll-behavior: smooth; }
+
+::selection {
+  background: var(--cta-blue);
+  color: white;
+}
+
+/* ── Subtle glow for CTAs on dark ───────── */
+
+.glow-blue {
+  box-shadow: 0 0 40px rgba(30, 167, 255, 0.15);
+}
+
+/* ── Ambient gradient orb (hero bg) ─────── */
+
+.ambient-orb {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(30,167,255,0.08) 0%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+}

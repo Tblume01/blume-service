@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /.next/
+Disallow: /api/
+Disallow: /admin/
+Crawl-delay: 1
+
+Sitemap: https://blumeservice.com/sitemap.xml
