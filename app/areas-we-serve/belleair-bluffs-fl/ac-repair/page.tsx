@@ -7,9 +7,9 @@ import { Metadata } from 'next';
 const CITY = 'Belleair Bluffs';
 const STATE = 'FL';
 const COUNTY = 'Pinellas County';
-const PHONE_MAIN = '(855) 258-6322';
-const PHONE_EMERGENCY = '(727) 205-7984';
-const PHONE_LOCAL = '(727) 334-7532';
+const PHONE_MAIN = '(727) 330-9131';
+const PHONE_EMERGENCY = '(727) 330-9131';
+const PHONE_LOCAL = '(727) 330-9131';
 
 export const metadata: Metadata = {
   title: `AC Repair in ${CITY}, ${STATE} | Same-Day Service | Blume Mechanical`,
@@ -30,7 +30,7 @@ function ServiceSchema() {
       '@type': 'HVACBusiness',
       name: 'Blume Mechanical Service, LLC',
       image: '/images/blume-logo.png',
-      telephone: '+1-855-258-6322',
+      telephone: '+1-727-330-9131',
       email: 'Tye@BlumeService.com',
       url: 'https://blumeservice.com',
       address: {
@@ -137,10 +137,10 @@ export default function BelleairBluffsACRepair() {
               AC repair with upfront pricing and zero surprise charges.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href={`tel:+18552586322`} className="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition text-center">
+              <a href={`tel:+17273309131`} className="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition text-center">
                 Call Now — {PHONE_MAIN}
               </a>
-              <a href={`tel:+17272057984`} className="border-2 border-white hover:bg-white hover:text-blue-900 text-white font-bold py-4 px-8 rounded-lg text-lg transition text-center">
+              <a href={`tel:+17273309131`} className="border-2 border-white hover:bg-white hover:text-blue-900 text-white font-bold py-4 px-8 rounded-lg text-lg transition text-center">
                 Emergency — {PHONE_EMERGENCY}
               </a>
             </div>
@@ -363,10 +363,10 @@ export default function BelleairBluffsACRepair() {
             service or book online for priority scheduling.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={`tel:+18552586322`} className="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-10 rounded-lg text-xl transition">
+            <a href={`tel:+17273309131`} className="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-10 rounded-lg text-xl transition">
               Call — {PHONE_MAIN}
             </a>
-            <a href={`tel:+17272057984`} className="border-2 border-white hover:bg-white hover:text-blue-900 text-white font-bold py-4 px-10 rounded-lg text-xl transition">
+            <a href={`tel:+17273309131`} className="border-2 border-white hover:bg-white hover:text-blue-900 text-white font-bold py-4 px-10 rounded-lg text-xl transition">
               Emergency — {PHONE_EMERGENCY}
             </a>
           </div>

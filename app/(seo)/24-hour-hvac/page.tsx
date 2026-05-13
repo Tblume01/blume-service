@@ -26,7 +26,7 @@ function JsonLd() {
       '@type': 'LocalBusiness',
       name: 'Blume Service Group',
       image: '/images/blume-logo.png',
-      telephone: '+1-727-XXX-XXXX',
+      telephone: '+1-727-330-9131',
       address: {
         '@type': 'PostalAddress',
         streetAddress: '123 Main Street',
@@ -81,7 +81,7 @@ export default function Page() {
             Fast, reliable HVAC service in Tampa Bay — available 24/7 for emergencies
           </p>
           <a
-            href="tel:+1727XXXXXXX"
+            href="tel:+17273309131"
             className="inline-block bg-red-600 text-white font-bold py-4 px-8 rounded-lg text-lg hover:bg-red-700 transition"
           >
             Schedule Emergency Service
@@ -143,7 +143,7 @@ export default function Page() {
             scheduling.
           </p>
           <a
-            href="tel:+1727XXXXXXX"
+            href="tel:+17273309131"
             className="inline-block bg-red-600 text-white font-bold py-4 px-8 rounded-lg text-lg hover:bg-red-700 transition"
           >
             Schedule Emergency Service

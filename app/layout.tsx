@@ -68,14 +68,14 @@ export default function RootLayout({
 
             <div className="flex items-center gap-3">
               <a
-                href="tel:{config.company.phoneHref}"
+                href={`tel:${config.company.phoneHref}`}
                 className="hidden sm:flex items-center gap-2 text-sm font-semibold text-[#081120]"
               >
                 <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                (855) 258-6322
+                {config.company.phone}
               </a>
               <a
-                href="tel:{config.company.phoneHref}"
+                href={`tel:${config.company.phoneHref}`}
                 className="btn-primary !py-2 !px-5 !text-sm"
               >
                 Schedule Consultation
@@ -135,12 +135,8 @@ export default function RootLayout({
                 </h4>
                 <ul className="space-y-3 text-sm text-blue-200">
                   <li>
-                    <span className="text-blue-400 text-xs block">Main</span>
-                    <a href="tel:{config.company.phoneHref}" className="hover:text-white transition font-medium">(855) 258-6322</a>
-                  </li>
-                  <li>
-                    <span className="text-blue-400 text-xs block">Emergency</span>
-                    <a href="tel:+17272057984" className="hover:text-white transition font-medium">(727) 205-7984</a>
+                    <span className="text-blue-400 text-xs block">Office</span>
+                    <a href={`tel:${config.company.phoneHref}`} className="hover:text-white transition font-medium">{config.company.phone}</a>
                   </li>
                   <li>
                     <span className="text-blue-400 text-xs block">Email</span>
