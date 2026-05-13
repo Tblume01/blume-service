@@ -2,8 +2,8 @@
 export const config = {
   company: {
     name: process.env.NEXT_PUBLIC_COMPANY_NAME || 'Blume Mechanical Service, LLC',
-    phone: process.env.NEXT_PUBLIC_PHONE || '(727) 580-0169',
-    phoneHref: process.env.NEXT_PUBLIC_PHONE_HREF || '+17275800169',
+    phone: process.env.NEXT_PUBLIC_PHONE || '(727) 330-9131',
+    phoneHref: process.env.NEXT_PUBLIC_PHONE_HREF || '+17273309131',
     email: process.env.NEXT_PUBLIC_EMAIL || 'Tye@blumeservice.com',
   },
   address: {
