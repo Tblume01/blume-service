@@ -75,14 +75,31 @@ export function GTM() {
               }
             };
 
-            // Auto-track phone clicks
+            // Auto-track phone clicks with full attribution
             document.addEventListener('click', (e) => {
               const link = e.target.closest('a[href^="tel:"]');
               if (link) {
+                const params = new URLSearchParams(window.location.search);
                 window.trackEvent('phone_call', {
-                  phone_number: link.href.replace('tel:', '')
+                  phone_number: link.href.replace('tel:', ''),
+                  page_url: window.location.pathname,
+                  page_title: document.title,
+                  button_text: link.textContent.trim(),
+                  utm_source: params.get('utm_source') || 'direct',
+                  utm_medium: params.get('utm_medium') || 'organic',
+                  utm_campaign: params.get('utm_campaign') || 'none',
+                  referrer: document.referrer || 'direct',
                 });
               }
+            });
+
+            // Auto-track form submissions
+            document.addEventListener('submit', (e) => {
+              const form = e.target;
+              window.trackEvent('form_submit', {
+                page_url: window.location.pathname,
+                form_id: form.id || 'unknown',
+              });
             });
           `,
         }}
